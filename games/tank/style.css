@@ -1,0 +1,26 @@
+.tank-canvas {
+    background: #2a3a2a;
+    border-radius: 24px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 0 4px #896e4b;
+    cursor: pointer;
+}
+
+.settings-group select {
+    background: #fff3e0;
+    border: 1px solid #b87c4f;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .tank-canvas {
+        width: 100%;
+        height: auto;
+    }
+    .settings-group {
+        transform: scale(0.9);
+    }
+}

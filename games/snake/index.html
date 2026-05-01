@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>贪吃蛇 | 经典挑战</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page-body">
+<div class="game-wrapper">
+    <div class="game-panel">
+        <div class="score-header">
+            <div class="score-board">🍎 分数: <span id="snakeScore">0</span></div>
+            <button class="reset-btn" id="resetSnake">🐍 新游戏</button>
+        </div>
+        <canvas id="snakeCanvas" class="snake-canvas"></canvas>
+
+        <!-- 手机触摸控制 -->
+        <div class="touch-controls">
+            <div class="direction-pad">
+                <div></div>
+                <div class="direction-btn" data-dir="up">▲</div>
+                <div></div>
+                <div class="direction-btn" data-dir="left">◀</div>
+                <div class="direction-btn" data-dir="down">▼</div>
+                <div class="direction-btn" data-dir="right">▶</div>
+            </div>
+        </div>
+
+        <div class="controls-tip">方向键移动 | 触摸按钮控制</div>
+        <a href="../../index.html" class="back-home">🏠 返回游戏中心</a>
+    </div>
+</div>
+<script src="../../js/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

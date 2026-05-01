@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>坦克大作战 | 钢铁突击</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page-body">
+<div class="game-wrapper">
+    <div class="game-panel">
+        <div class="score-header">
+            <div class="score-board">💥 击毁: <span id="tankScore">0</span></div>
+            <div class="settings-group" style="display:flex; gap:8px; align-items:center;">
+                <label style="color:#4a2a1a; font-weight:bold;">敌方:</label>
+                <select id="enemyCount" style="padding:5px 10px; border-radius:20px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <button class="reset-btn" id="applySettings" style="background:#6c4a2e; padding:5px 12px;">✅</button>
+            </div>
+            <button class="reset-btn" id="resetTank">🎮 重新</button>
+        </div>
+        <canvas id="tankCanvas" class="tank-canvas"></canvas>
+
+        <!-- 手机触摸控制 -->
+        <div class="touch-controls">
+            <div class="direction-pad">
+                <div></div>
+                <div class="direction-btn" data-dir="up">▲</div>
+                <div></div>
+                <div class="direction-btn" data-dir="left">◀</div>
+                <div class="direction-btn" data-dir="down">▼</div>
+                <div class="direction-btn" data-dir="right">▶</div>
+            </div>
+            <div class="action-btn" id="mobileShootBtn">🔫 射击</div>
+        </div>
+
+        <div class="controls-tip">方向键移动，空格射击 | 触摸摇杆+按钮</div>
+        <a href="../../index.html" id="backToHome" class="back-home">🏠 返回游戏中心</a>
+    </div>
+</div>
+<script src="../../js/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

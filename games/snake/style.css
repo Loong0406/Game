@@ -1,0 +1,14 @@
+.snake-canvas {
+    background: #1b2a1a;
+    border-radius: 24px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 0 4px #7e5a42;
+}
+
+@media (max-width: 768px) {
+    .snake-canvas {
+        width: 100%;
+        height: auto;
+    }
+}

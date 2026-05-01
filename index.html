@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>经典游戏合集 | 游戏中心</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        /* 主页面专用样式 */
+        .portal-container {
+            max-width: 1300px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            border-radius: 60px;
+            padding: 40px 30px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+        }
+
+        .portal-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .portal-header h1 {
+            font-size: 56px;
+            color: #ffefc0;
+            text-shadow: 5px 5px 0 #5a3a1a;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #f5e2b0;
+            margin-top: 12px;
+        }
+
+        .game-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+            margin: 40px 0;
+        }
+
+        .game-card-link {
+            text-decoration: none;
+            transition: transform 0.2s ease;
+            display: block;
+        }
+
+        .game-card-link:active {
+            transform: scale(0.96);
+        }
+
+        .game-portal-card {
+            background: #fef7e0;
+            border-radius: 48px;
+            padding: 32px 28px;
+            width: 260px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s;
+            box-shadow: 0 15px 0 #b87333;
+            border: 2px solid #ffe1a0;
+        }
+
+        .game-portal-card:active {
+            transform: translateY(4px);
+            box-shadow: 0 8px 0 #a55d2a;
+        }
+
+        .card-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .game-portal-card h2 {
+            font-size: 32px;
+            color: #4a2a1a;
+            margin-bottom: 12px;
+        }
+
+        .game-portal-card p {
+            font-size: 16px;
+            color: #7a5a3a;
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            background: #e7cfaa;
+            border-radius: 40px;
+            padding: 8px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #4a2e1a;
+            font-family: monospace;
+        }
+
+        .portal-footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #ecd9b4;
+            font-size: 14px;
+        }
+
+        /* 手机适配 */
+        @media (max-width: 768px) {
+            .portal-container {
+                padding: 20px 15px;
+                border-radius: 40px;
+            }
+            .portal-header h1 {
+                font-size: 40px;
+            }
+            .subtitle {
+                font-size: 16px;
+            }
+            .game-portal-card {
+                padding: 20px 20px;
+                width: 160px;
+            }
+            .card-emoji {
+                font-size: 50px;
+            }
+            .game-portal-card h2 {
+                font-size: 22px;
+            }
+            .game-portal-card p {
+                font-size: 12px;
+            }
+            .card-footer {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-grid {
+                gap: 15px;
+            }
+            .game-portal-card {
+                width: 140px;
+                padding: 15px 12px;
+            }
+            .card-emoji {
+                font-size: 40px;
+            }
+            .game-portal-card h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="portal-container">
+    <header class="portal-header">
+        <h1>🎮 经典游戏合集</h1>
+        <p class="subtitle">点击卡片开始游戏 | 支持触摸/键盘双操作</p>
+    </header>
+
+    <div class="game-grid">
+        <a href="games/2048/index.html" class="game-card-link">
+            <div class="game-portal-card" data-game="2048">
+                <div class="card-emoji">🧩</div>
+                <h2>2048</h2>
+                <p>合并数字，挑战2048！</p>
+                <div class="card-footer">← ↑ → ↓ 或 滑动屏幕</div>
+            </div>
+        </a>
+
+        <a href="games/tetris/index.html" class="game-card-link">
+            <div class="game-portal-card" data-game="tetris">
+                <div class="card-emoji">🧱</div>
+                <h2>俄罗斯方块</h2>
+                <p>经典消除，永不落幕</p>
+                <div class="card-footer">触摸按钮 或 键盘</div>
+            </div>
+        </a>
+
+        <a href="games/snake/index.html" class="game-card-link">
+            <div class="game-portal-card" data-game="snake">
+                <div class="card-emoji">🐍</div>
+                <h2>贪吃蛇</h2>
+                <p>贪吃长大，挑战极限</p>
+                <div class="card-footer">方向键 或 触摸按钮</div>
+            </div>
+        </a>
+
+        <a href="games/tank/index.html" class="game-card-link">
+            <div class="game-portal-card" data-game="tank">
+                <div class="card-emoji">🚀</div>
+                <h2>坦克大作战</h2>
+                <p>射击敌军，成为王牌</p>
+                <div class="card-footer">触摸摇杆 或 键盘</div>
+            </div>
+        </a>
+    </div>
+
+    <footer class="portal-footer">
+        <p>💡 提示：手机端使用屏幕按钮控制，电脑端可用键盘操作</p>
+    </footer>
+</div>
+</body>
+</html>

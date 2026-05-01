@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>俄罗斯方块 | 经典益智</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page-body">
+<div class="game-wrapper">
+    <div class="game-panel">
+        <div class="score-header">
+            <div class="score-board">📊 分数: <span id="tetrisScore">0</span></div>
+            <button class="reset-btn" id="resetTetris">🔄 新对局</button>
+        </div>
+        <canvas id="tetrisCanvas" class="tetris-canvas"></canvas>
+
+        <!-- 手机触摸控制 -->
+        <div class="touch-controls">
+            <div class="direction-pad">
+                <div></div>
+                <div class="direction-btn" data-dir="up">▲</div>
+                <div></div>
+                <div class="direction-btn" data-dir="left">◀</div>
+                <div class="direction-btn" data-dir="down">▼</div>
+                <div class="direction-btn" data-dir="right">▶</div>
+            </div>
+            <div class="action-btn rotate-btn" id="rotateBtn">🔄 旋转</div>
+        </div>
+
+        <div class="controls-tip">← → 移动，↑ 旋转，↓ 加速 | 触摸按钮操作</div>
+        <a href="../../index.html" class="back-home">🏠 返回游戏中心</a>
+    </div>
+</div>
+<script src="../../js/common.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
